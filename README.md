@@ -1,4 +1,4 @@
-# Curriculum vitae - Bojan Popržen
+# Curriculum Vitae - Bojan Popržen
 This repo should contain my up-to-date CV. 
 
 ## Compiling the .tex file

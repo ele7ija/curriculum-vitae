@@ -1,0 +1,105 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%       Curriculum Vitae       %
+% 	     Bojan Popržen         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[11pt]{article}
+
+
+%%%%%%%%%%%%
+% packages %
+%%%%%%%%%%%%
+
+\usepackage[margin=15mm]{geometry}
+\usepackage{tikz}
+
+
+%%%%%%%%%%
+% colors %
+%%%%%%%%%%
+
+\definecolor{maincolour}{HTML}{191970}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom command definitions %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Custom rules: thick horizontal, thin horizontal, vertical
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\SRule}{\rule{\linewidth}{0.2pt}}
+\newcommand{\VRule}{\color{lightgray}\vrule width 0.5pt}
+
+% "Divider" that comes after each sub-heading
+\newcommand{\divider}{\vskip-7pt\HRule\hfill\vskip-1.1em\SRule\vskip1em}
+
+% This is the command used to produce each sub-heading.
+% Usage: \heading{Heading text}.
+\newcommand{\heading}[1]{%
+{\LARGE \bf \textcolor{maincolour}{#1}}
+\textcolor{maincolour}{\divider}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%
+% START OF DOCUMENT %
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+% Avoid printing page numbers
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%
+% MAJOR HEADING %
+%%%%%%%%%%%%%%%%%
+
+\begin{tikzpicture}[remember picture, overlay, transform shape]
+\node[anchor=north west, rectangle, text width=\paperwidth, text centered, text height=3.75em, text depth=5.5em, fill=maincolour] at (current page.north west) 
+{\textcolor{white}{
+	% Name
+	{\Huge \bf Bojan Popr\v{z}en} \\[0.5em]
+	% Tagline 
+	{\Large Undergraduate student of Software Engineering} \\[0.25em] 
+	% Contact data
+	{\begin{tabular}{c c c c c} 
+	+381 (0)64 8138 222 (Serbia) & \textbullet & 
+	{\tt bpoprzen@gmail.com}
+	\end{tabular}}  \\[0.25em]
+	}
+};
+\end{tikzpicture}
+
+\vspace{6em}
+
+
+%%%%%%%%%%%%%
+% EDUCATION %
+%%%%%%%%%%%%%
+
+\heading{Education}
+
+
+%%%%%%%%%%%%%%%%%%%
+% WORK EXPERIENCE %
+%%%%%%%%%%%%%%%%%%%
+
+\heading{Work Experience}
+
+
+%%%%%%%%%%
+% SKILLS %
+%%%%%%%%%%
+
+\heading{Skills}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%
+% END OF DOCUMENT %
+%%%%%%%%%%%%%%%%%%%
+
+\end{document}
+
+
