@@ -46,6 +46,31 @@
 \textcolor{maincolour}{\divider}
 }
 
+% Command used to make an education-related entry
+% Usage: \educationentry{Optional arg - Vertical space after}{Start date -- End date}{Diploma}{Faculty}{University}{Details}
+\newcommand{\educationentry}[6][1em]{
+	\begin{tabular}{@{}l} %supress the space
+		{\bfseries #4}	% Faculty
+	\end{tabular}
+	\hfill
+	\begin{tabular}{l@{}}
+		{\bfseries #5} % University
+	\end{tabular}
+	%\par
+
+	\begin{tabular}{@{}l}
+		{#3}
+	\end{tabular}
+	\hfill
+	\begin{tabular}{l@{}}
+		{#2}
+	\end{tabular}
+
+	#6
+	\par\addvspace{#1}
+
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%
 % START OF DOCUMENT %
@@ -92,6 +117,14 @@
 
 \heading{Education}
 
+\educationentry{Oct 2017 -- present}{Bachelor's: Software Engineering and IT (GPA: 9.95/10)}{Faculty of Technical Sciences}{University of Novi Sad, Serbia}{}
+
+
+%%%%%%%%
+% PROJECTS %
+%%%%%%%%
+
+\heading{Projects}
 
 %%%%%%%%%%%%%%%%%%%
 % WORK EXPERIENCE %
