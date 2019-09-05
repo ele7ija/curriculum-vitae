@@ -16,10 +16,22 @@
 \usepackage{graphicx}
 \usepackage{epstopdf}
 \usepackage{hyperref}
+\usepackage{array}
 
 
 \usetikzlibrary{arrows,decorations,positioning}
 
+%%%%%%%%
+% Page setup %
+%%%%%%%%
+
+% Remove separations
+\setlength{\parindent}{0pt}
+\setlength{\itemsep}{0pt}
+
+% Defining the layout of tabular columns
+\newcolumntype{L}{>{\raggedleft}p{0.12\textwidth}}
+\newcolumntype{D}{p{0.82\textwidth}}
 
 %%%%%%%%%%
 % colors %
@@ -47,30 +59,47 @@
 }
 
 % Command used to make an education-related entry
-% Usage: \educationentry{Optional arg - Vertical space after}{Start date -- End date}{Diploma}{Faculty}{University}{Details}
-\newcommand{\educationentry}[6][1em]{
+% Usage: \educationentry{Optional arg - Vertical space after}{Diploma}{Faculty}{University}{Details}
+\newcommand{\educationentry}[5][0.25em]{
 	\begin{tabular}{@{}l} %supress the space
-		{\bfseries #4}	% Faculty
+		{\bfseries #3}	% Faculty
 	\end{tabular}
 	\hfill
 	\begin{tabular}{l@{}}
-		{\bfseries #5} % University
-	\end{tabular}
-	%\par
-
+		{\bfseries #4} % University
+	\end{tabular} 
+	\newline
 	\begin{tabular}{@{}l}
-		{#3}
-	\end{tabular}
-	\hfill
-	\begin{tabular}{l@{}}
 		{#2}
 	\end{tabular}
-
-	#6
-	\par\addvspace{#1}
-
+	%\hfill - DEPRECATED used the timelibne here before
+	%\newline - NEEDS to be added if 5 is anything other than _
+	#5
+	%\vspace{#1}
 }
 
+%% Command used to make the |Timeline|educationentry| table 
+%% Usage: \timelinetable{firstrowfirstcol & firstrowsecondcol \\ secondrowfirstcol & secondrowsecondcol}
+\newcommand{\timelinetable}[1]{
+	\begin{tabular}{L!{\VRule}D}
+		#1
+	\end{tabular}
+	\\[0.5em]
+}
+
+% These commands are used to wrap sub-items.
+% Usage: 
+% \sitemize{
+%   \sitem Item 
+%   \sitem Item2
+% }
+\newcommand{\sitemize}[1]{%
+	\vspace{0.5em}
+	\begin{itemize}
+		#1	
+	\end{itemize}
+}
+\newcommand{\sitem}{\item[$\sim$]}
 
 %%%%%%%%%%%%%%%%%%%%%
 % START OF DOCUMENT %
@@ -117,8 +146,7 @@
 
 \heading{Education}
 
-\educationentry{Oct 2017 -- present}{Bachelor's: Software Engineering and IT (GPA: 9.95/10)}{Faculty of Technical Sciences}{University of Novi Sad, Serbia}{}
-
+\timelinetable{Oct 2017 -- present & \educationentry{Bachelor's: Software Engineering and IT (GPA: 9.95/10)}{Faculty of Technical Sciences}{University of Novi Sad, Serbia}{}}
 
 %%%%%%%%
 % PROJECTS %
