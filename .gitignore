@@ -1,1 +1,3 @@
 guidelines.txt
+*.synctex(busy)
+*.gz

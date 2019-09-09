@@ -1,15 +1,14 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%       Curriculum Vitae       %
-% 	     Bojan Popržen         %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%
+%       Curriculum Vitae     %
+% 	    Bojan Popržen      %
+%%%%%%%%%%%%%%
 
 \documentclass[11pt]{article}
 
 
-%%%%%%%%%%%%
-% packages %
-%%%%%%%%%%%%
+%%%%%%%
+% Packages %
+%%%%%%%
 
 \usepackage[margin=15mm]{geometry}
 \usepackage{tikz}
@@ -17,6 +16,8 @@
 \usepackage{epstopdf}
 \usepackage{hyperref}
 \usepackage{array}
+\usepackage{paralist}
+\usepackage{ifthen}
 
 
 \usetikzlibrary{arrows,decorations,positioning}
@@ -25,11 +26,12 @@
 % Page setup %
 %%%%%%%%
 
-% Remove separations
+% Remove implicit indentations and separations
 \setlength{\parindent}{0pt}
 \setlength{\itemsep}{0pt}
 
-% Defining the layout of tabular columns
+
+% Defining the layout of tabular columns (0.96)
 \newcolumntype{L}{>{\raggedleft}p{0.17\textwidth}}
 \newcolumntype{D}{p{0.79\textwidth}}
 
@@ -53,15 +55,15 @@
 
 % This is the command used to produce each sub-heading.
 % Usage: \heading{Heading text}.
-\newcommand{\heading}[1]{%
-{\LARGE \bf \textcolor{maincolour}{#1}}
-\textcolor{maincolour}{\divider}
+\newcommand{\heading}[1]{
+	{\LARGE \bf \textcolor{maincolour}{#1}}
+	\textcolor{maincolour}{\divider}
 }
 
 % Command used to make an education-related entry
 % Usage: \educationentry{Optional arg - Vertical space after}{Diploma}{Faculty}{University}{Details}
 \newcommand{\educationentry}[5][0.25em]{
-	\begin{tabular}{@{}l} %supress the space
+	\begin{tabular}{@{}l} % supress the space
 		{\bfseries #3}	% Faculty
 	\end{tabular}
 	\hfill
@@ -72,10 +74,8 @@
 	\begin{tabular}{@{}l}
 		{#2}
 	\end{tabular}
-	%\hfill - DEPRECATED used the timelibne here before
-	%\newline - NEEDS to be added if 5 is anything other than _
+	\hfill
 	#5
-	%\vspace{#1}
 }
 
 %% Command used to make the |Timeline|educationentry| table 
@@ -87,32 +87,19 @@
 	\\[0.5em]
 }
 
-% These commands are used to wrap sub-items.
-% Usage: 
-% \sitemize{
-%   \sitem Item 
-%   \sitem Item2
-% }
-\newcommand{\sitemize}[1]{%
-	\vspace{0.5em}
-	\begin{itemize}
-		#1	
-	\end{itemize}
-}
-\newcommand{\sitem}{\item[$\sim$]}
 
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%
 % START OF DOCUMENT %
-%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%
 
 \begin{document}
 
 % Avoid printing page numbers
 \pagestyle{empty}
 
-%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
 % MAJOR HEADING %
-%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%
 
 \begin{tikzpicture}[remember picture, overlay, transform shape]
 \node[anchor=north west, rectangle, text width=\paperwidth, text centered, text height=3.75em, text depth=5.5em, fill=maincolour] at (current page.north west) 
@@ -140,13 +127,32 @@
 
 
 
-%%%%%%%%%%%%%
+%%%%%%%%
 % EDUCATION %
-%%%%%%%%%%%%%
+%%%%%%%%
 
 \heading{Education}
 
 \timelinetable{Oct 2017 -- present & \educationentry{Bachelor's: Software Engineering and IT (GPA: 9.95/10)}{Faculty of Technical Sciences}{University of Novi Sad, Serbia}{}}
+
+%%%%%%%%%%%%
+% WORK EXPERIENCE %
+%%%%%%%%%%%%
+
+\heading{Work Experience}
+
+\timelinetable{
+	Oct 2019 -- present & 		\educationentry{Teaching Assistant/Demonstrator}{Faculty of Technical Sciences}{Novi Sad, Serbia}
+{\newline 
+Courses: \renewcommand{\labelitemi}{$\textendash$} % Dash instead of dots
+ \begin{compactitem}
+	\item {\bfseries Object Oriented Programming 2} - Advanced Concepts of OOP using C++ 
+	\item {\bfseries System Programming 1} - Design of Assembler, Compiler, Loader and Linker; Formal Systems and Formal Grammars; Chomsky hierarchy
+\end{compactitem}} \\
+	May -- Sep 2018 &	\educationentry{Volunteer}{AIESEC}{Novi Sad, Serbia}
+{\newline 
+AIESEC is the world's largest youth-run organization. I took part in a team which sent people from Serbia to internships worldwide and welcomed interns coming to Serbia.}
+}
 
 %%%%%%%%
 % PROJECTS %
@@ -154,16 +160,10 @@
 
 \heading{Projects}
 
-%%%%%%%%%%%%%%%%%%%
-% WORK EXPERIENCE %
-%%%%%%%%%%%%%%%%%%%
 
-\heading{Work Experience}
-
-
-%%%%%%%%%%
+%%%%%%
 % SKILLS %
-%%%%%%%%%%
+%%%%%%
 
 \heading{Skills}
 
