@@ -35,6 +35,9 @@
 \newcolumntype{L}{>{\raggedleft}p{0.17\textwidth}}
 \newcolumntype{D}{p{0.79\textwidth}}
 
+\newcolumntype{A}{>{\raggedleft}p{0.08\textwidth}}
+\newcolumntype{B}{p{0.88\textwidth}}
+
 %%%%%%%%%%
 % colors %
 %%%%%%%%%%
@@ -78,10 +81,35 @@
 	#5
 }
 
+% Command used to make an project-related entry
+% Usage: \educationentry{Optional arg - Vertical space after}{Technologies}{Project name}{Web-site}{Details}
+\newcommand{\projectentry}[5][0.25em]{
+	\begin{tabular}{@{}l} % supress the space
+		{\bfseries #3}	% Project name
+	\end{tabular}
+	\hfill
+	\begin{tabular}{l@{}}
+		{#4} % Web-site
+	\end{tabular} 
+	\newline
+	\begin{tabular}{@{}l}
+		{#2} % Technologies
+	\end{tabular}
+	\newline
+	#5
+}
+
 %% Command used to make the |Timeline|educationentry| table 
 %% Usage: \timelinetable{firstrowfirstcol & firstrowsecondcol \\ secondrowfirstcol & secondrowsecondcol}
 \newcommand{\timelinetable}[1]{
 	\begin{tabular}{L!{\VRule}D}
+		#1
+	\end{tabular}
+	\\[0.5em]
+}
+
+\newcommand{\timelinetableprojects}[1]{
+	\begin{tabular}{A!{\VRule}B}
 		#1
 	\end{tabular}
 	\\[0.5em]
@@ -160,6 +188,7 @@ AIESEC is the world's largest youth-run organization. I took part in a team whic
 
 \heading{Projects}
 
+\timelinetableprojects{2019 & \projectentry{\begin{tabular}{@{}l c c c c c c}Python & \textendash & Jupyter Notebook & \textendash & Numpy & \textendash & Reinforcement Learning \end{tabular}}{Q-Learning mouse}{\href{https://github.com/ele7ija/Q-Learning-Mouse}{\tt github.com/ele7ija/Q-Learning-Mouse}}{Details}}
 
 %%%%%%
 % SKILLS %
