@@ -77,7 +77,7 @@
 	\begin{tabular}{@{}l}
 		{#2}
 	\end{tabular}
-	\newline
+	\vspace{0.5em}
 	% \hfill
 	#5
 }
@@ -88,6 +88,7 @@
 	\begin{tabular}{@{}l} % supress the space
 		{\bfseries #3}	% Project name
 	\end{tabular}
+	\vspace{0.3em}
 	\hfill
 	\begin{tabular}{l@{}}
 		{#4} % Web-site
@@ -132,8 +133,9 @@
 %%%%%%%%%%%
 
 \begin{tikzpicture}[remember picture, overlay, transform shape]
-\node[anchor=north west, rectangle, text width=\paperwidth, text centered, text height=3.75em, text depth=5.5em, fill=maincolour] at (current page.north west) 
-{\textcolor{white}{
+\node[anchor=north west, rectangle, text width=\paperwidth, text centered, text height=4.75em, text depth=7.5em, fill=maincolour] at (current page.north west) 
+{
+\textcolor{white}{
 	% Name
 	{\Huge \bf Bojan Popr\v{z}en} \\[0.5em]
 	% Tagline 
@@ -142,8 +144,7 @@
 	{\begin{tabular}{c c c c c c c} 
 	30.04.1998. & \textbullet &
 	Novi Sad, Serbia & \textbullet &
-	{\tt bpoprzen@gmail.com} & \textbullet & 
-	+381 (0)64 8138 222
+	{\tt bpoprzen@gmail.com}
 	\end{tabular}}  \\[0.25em]
 	{\begin{tabular}{r c r c} 
 	\includegraphics[width=1em]{./assets/In-White-2in-TM} & {\href{https://linkedin.com/in/bpoprzen}{\tt linkedin.com/in/bpoprzen}} &
@@ -151,9 +152,11 @@
 	\end{tabular}}
 	}
 };
+\node[anchor=north west, rectangle, text width=.2\paperwidth, inner sep=0.3cm] at (current page.north west)
+	{\hspace*{25pt}\includegraphics[width=.7\textwidth]{./assets/portrait.jpg}};
 \end{tikzpicture}
 
-\vspace{6em}
+\vspace{9em}
 
 
 
@@ -163,7 +166,7 @@
 
 \heading{Education}
 
-\timelinetable{Oct 2017 -- present & \educationentry{Bachelor's: Software Engineering and IT (GPA: 9.95/10)}{Faculty of Technical Sciences}{University of Novi Sad, Serbia}{Courses and more info at: \href{http://bit.ly/2RaGBi0}{\tt http://bit.ly/2RaGBi0}}}
+\timelinetable{Oct 2017 -- present & \educationentry{Bachelor's: Software Engineering and IT (GPA: 9.95/10)}{Faculty of Technical Sciences}{University of Novi Sad, Serbia}{\newline Courses and more info at: \href{http://bit.ly/2RaGBi0}{\tt http://bit.ly/2RaGBi0}}}
 
 %%%%%%%%%%%%
 % WORK EXPERIENCE %
@@ -179,7 +182,7 @@ Courses: \renewcommand{\labelitemi}{$\textendash$} % Dash instead of dots
 	\item {\bfseries Object Oriented Programming 2} - Advanced Concepts of OOP using C++ 
 	\item {\bfseries System Programming 1} - Assembler, Compiler, Loader and Linker; Grammars
 \end{compactitem}} \\
-	May -- Sep 2018 &	\educationentry{Volunteer}{AIESEC}{Novi Sad, Serbia}
+	May -- Sep 2019 &	\educationentry{Volunteer}{AIESEC}{Novi Sad, Serbia}
 {\newline 
 AIESEC is the world's largest youth-run organization.  I took part in a team which worked with international volunteers coming to Serbia.}
 }
@@ -191,8 +194,12 @@ AIESEC is the world's largest youth-run organization.  I took part in a team whi
 \heading{Projects}
 
 \timelinetableprojects{
-2019 & \projectentry{\begin{tabular}{@{}l c c c c c c c c}\textit{Research} & \textendash & Reinforcement Learning & \textendash & Python & \textendash & Jupyter Notebook & \textendash & Numpy \end{tabular}}{Q-Learning mouse}{\href{https://github.com/ele7ija/Q-Learning-Mouse}{\tt github.com/ele7ija/Q-Learning-Mouse}}{An agent utilizes Q-Learning (RL) in a discrete action space. The next step would be to apply NNs as approximation functions in a continuous state/action space.} \vspace{0.75em} \\ 
-2019 & \projectentry{\begin{tabular}{@{}l c c c c c c c c}\textit{Application} & \textendash & Java & \textendash & Swing & \textendash & PowerDesigner & \textendash & XML\end{tabular}}{Smart Home}{\href{https://gitlab.com/bpoprzen/smart_home}{\tt gitlab.com/bpoprzen/smart\_home}}{Desktop Java application for generating XML files based on user inputs in GUI.}}
+2020 & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Web App (Monolith)} & \textendash & REST & \textendash & Java Spark & \textendash & Vue.js & \textendash & Node.js & \textendash & Postman\end{tabular}}{Yet Another Cloud Platform prototype}{\href{https://gitlab.com/DjukaBazuka16/web-projekat}{\tt gitlab.com/DjukaBazuka16/web-projekat}}{Application which mimics an IaaS provider. There's a dashboard for users to manage rented resources (compute power, storage) including activity history and payment info.} \vspace{0.75em} \\ 
+2019 & \projectentry{\begin{tabular}{@{}l c c c c c c c c}\textit{Research} & \textendash & Reinforcement Learning & \textendash & Python & \textendash & Jupyter Notebook & \textendash & Numpy \end{tabular}}{Q-Learning mouse}{\href{https://github.com/ele7ija/Q-Learning-Mouse}{\tt github.com/ele7ija/Q-Learning-Mouse}}{An agent utilizes Q-Learning (RL) in a discrete action space. The next step would be to apply NNs as approximation functions in a continuous state/action space.}
+% ARCHIVE
+% 2019 & \projectentry{\begin{tabular}{@{}l c c c c c c c c}\textit{Application} & \textendash & Java & \textendash & Swing & \textendash & PowerDesigner & \textendash & XML\end{tabular}}{Smart Home}{\href{https://gitlab.com/bpoprzen/smart_home}{\tt gitlab.com/bpoprzen/smart\_home}}{Desktop Java application for generating XML files based on user inputs in GUI.}
+}
+
 
 %%%%%%
 % SKILLS %
@@ -200,11 +207,11 @@ AIESEC is the world's largest youth-run organization.  I took part in a team whi
 
 \heading{Skills}
 \begin{compactitem}
-	\item \textit{Web} - Backend-oriented, SQL, Apache HTTPD, Tomcat but also HTML, CSS, JS
-	\item \textit{Software Development tools and practices} - Modeling (PowerDesigner), {\tt git}, JUnit, eclipse, virtualizations
+	\item \textit{Web} - Full-stack; interested in MEVN stack; familiar with Django, Java Spark, Vue.js
+	\item \textit{Interests} - Distributed systems, Systems design, AWS deployments, Messaging, Deep RL
+	\item \textit{Software Development tools and practices} - Maven, {\tt git}, eclipse, Postman, PowerDesigner
 	\item \textit{Competitive Programming} - Went to competitions organized by the Information Society of Serbia in High School; went to a few other hackathons and competitions
-	\item \textit{Other} - \LaTeX, PyZMQ, Jupyter Notebook
-	\item \textit{Interests} - various: RL and its applications, backend web programming, distributed apps (using PyZMQ)
+	\item \textit{Other} - \LaTeX, Jupyter Notebook
 	\item \textit{Languages}: Serbian, English (C1), German (A2)
 \end{compactitem}
 
