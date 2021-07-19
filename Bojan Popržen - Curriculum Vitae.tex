@@ -18,6 +18,7 @@
 \usepackage{array}
 \usepackage{paralist}
 \usepackage{ifthen}
+\usepackage{longtable}
 
 
 \usetikzlibrary{arrows,decorations,positioning}
@@ -112,10 +113,10 @@
 }
 
 \newcommand{\timelinetableprojects}[1]{
-	\begin{tabular}{A!{\VRule}B}
+	\begin{longtable}{A!{\VRule}B}
 		#1
-	\end{tabular}
-	\\[0.5em]
+	\end{longtable}
+	% \\[0.5em]
 }
 
 
@@ -144,7 +145,7 @@
 	{\begin{tabular}{c c c c c c c} 
 	30.04.1998. & \textbullet &
 	Novi Sad, Serbia & \textbullet &
-	{\tt bpoprzen@gmail.com}
+	{\href{mailto:bpoprzen@gmail.com}{\tt bpoprzen@gmail.com}}
 	\end{tabular}}  \\[0.25em]
 	{\begin{tabular}{r c r c} 
 	\includegraphics[width=1em]{./assets/In-White-2in-TM} & {\href{https://linkedin.com/in/bpoprzen}{\tt linkedin.com/in/bpoprzen}} &
@@ -158,15 +159,18 @@
 
 \vspace{9em}
 
-
-
 %%%%%%%%
 % EDUCATION %
 %%%%%%%%
 
 \heading{Education}
 
-\timelinetable{Oct 2017 -- present & \educationentry{Bachelor's: Software Engineering and IT (GPA: 9.95/10)}{Faculty of Technical Sciences}{University of Novi Sad, Serbia}{\newline Courses and more info at: \href{http://bit.ly/2RaGBi0}{\tt http://bit.ly/2RaGBi0}}}
+\timelinetable{
+	Oct 2017 -- present & \educationentry{Bachelor's: Software Engineering and IT (GPA: 9.84/10)}
+	{Faculty of Technical Sciences}
+	{University of Novi Sad, Serbia}
+	{\newline Courses and more info at: \href{http://bit.ly/2RaGBi0}{\tt http://bit.ly/2RaGBi0}}
+}
 
 %%%%%%%%%%%%
 % WORK EXPERIENCE %
@@ -175,16 +179,20 @@
 \heading{Work Experience}
 
 \timelinetable{
-	Oct 2019 -- present & 		\educationentry{Student Demonstrator}{Faculty of Technical Sciences}{Novi Sad, Serbia}
-{\newline 
+	Oct '20 -- Mar '21 &	\educationentry{Intern}{SAP}{Walldorf, Germany}{\newline
+Member of \textit{TI \& HA - Data Management and Platform}. Mainly worked around \textbf{improving caching architecture
+for user authorization throughout the cloud system}. Wrote code in Go, infrastructure in Docker and K8s. Also did some
+tooling support.
+}
+
+\\
+    Oct '19 -- Jan '20 & 	\educationentry{Student Demonstrator}{Faculty of Technical Sciences}{Novi Sad, Serbia}{\newline 
 Courses: \renewcommand{\labelitemi}{$\textendash$} % Dash instead of dots
  \begin{compactitem}
 	\item {\bfseries Object Oriented Programming 2} - Advanced Concepts of OOP using C++ 
 	\item {\bfseries System Programming 1} - Assembler, Compiler, Loader and Linker; Grammars
-\end{compactitem}} \\
-	May -- Sep 2019 &	\educationentry{Volunteer}{AIESEC}{Novi Sad, Serbia}
-{\newline 
-AIESEC is the world's largest youth-run organization.  I took part in a team which worked with international volunteers coming to Serbia.}
+\end{compactitem}
+}
 }
 
 %%%%%%%%
@@ -194,26 +202,48 @@ AIESEC is the world's largest youth-run organization.  I took part in a team whi
 \heading{Projects}
 
 \timelinetableprojects{
-2020 & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Web App (Monolith)} & \textendash & REST & \textendash & Java Spark & \textendash & Vue.js & \textendash & Node.js & \textendash & Postman\end{tabular}}{Yet Another Cloud Platform prototype}{\href{https://gitlab.com/DjukaBazuka16/web-projekat}{\tt gitlab.com/DjukaBazuka16/web-projekat}}{Application which mimics an IaaS provider. There's a dashboard for users to manage rented resources (compute power, storage) including activity history and payment info.} \vspace{0.75em} \\ 
-2019 & \projectentry{\begin{tabular}{@{}l c c c c c c c c}\textit{Research} & \textendash & Reinforcement Learning & \textendash & Python & \textendash & Jupyter Notebook & \textendash & Numpy \end{tabular}}{Q-Learning mouse}{\href{https://github.com/ele7ija/Q-Learning-Mouse}{\tt github.com/ele7ija/Q-Learning-Mouse}}{An agent utilizes Q-Learning (RL) in a discrete action space. The next step would be to apply NNs as approximation functions in a continuous state/action space.}
+present & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Research} & \textendash & Go & \textendash & Concurrency \end{tabular}}{Go Pipelines (Bachelor Thesis)}{\href{https://github.com/ele7ija/go-pipelines}{\tt github.com/ele7ija/go-pipelines}}
+{Looking at applications of \textit{Pipe-and-Filter} pattern in Go. Applying serial and parallel filters on a real-world example. Performance analysis.} \vspace{0.75em} \\ 
+2020 & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Commercial} & \textendash & Python (Django) & \textendash & Amazon S3 & \textendash & PostgreSQL & \textendash & Heroku \end{tabular}}{Civil Engineering Company's website}{available at: \href{https://doostabilnost.rs}{\tt doostabilnost.rs}}
+{A website for a local company I developed from zero and deployed. For BLOB storage I used S3 and PostgreSQL for relational data.} \vspace{0.75em} \\ 
+2021 & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Uni project} & \textendash & Fullstack & \textendash & Document-based  & \textendash & XML & \textendash & RDF & \textendash & Docker \end{tabular}}{Information System for Comissioner For Information of Public Importance's office}{\href{https://github.com/ele7ija/xml-web-services}{\tt github.com/ele7ija/xml-web-services}}
+{An extensive Information System that manages all sorts of documents in the process of requesting the information of public importance. Strong use of XML and RDF stores.} \vspace{0.75em} \\
+2021 & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Uni project} & \textendash & Fullstack & \textendash & Security  & \textendash & x.509 Certificates & \textendash & Keycloak & \textendash & Docker \end{tabular}}{Hospital Security System}{\href{https://github.com/djuricmilan/BSEP_T13}{\tt github.com/djuricmilan/BSEP\_T13}}
+{A general Information System that encompases Hospitals and various Devices in hospitals with a goal of securing their inter-communication. A custom CA infrastructure was involved.}}
 % ARCHIVE
 % 2019 & \projectentry{\begin{tabular}{@{}l c c c c c c c c}\textit{Application} & \textendash & Java & \textendash & Swing & \textendash & PowerDesigner & \textendash & XML\end{tabular}}{Smart Home}{\href{https://gitlab.com/bpoprzen/smart_home}{\tt gitlab.com/bpoprzen/smart\_home}}{Desktop Java application for generating XML files based on user inputs in GUI.}
-}
 
 
 %%%%%%
 % SKILLS %
 %%%%%%
 
-\heading{Skills}
-\begin{compactitem}
-	\item \textit{Web} - Full-stack; interested in MEVN stack; familiar with Django, Java Spark, Vue.js
-	\item \textit{Interests} - Distributed systems, Systems design, AWS deployments, Messaging, Deep RL
-	\item \textit{Software Development tools and practices} - Maven, {\tt git}, eclipse, Postman, PowerDesigner
-	\item \textit{Competitive Programming} - Went to competitions organized by the Information Society of Serbia in High School; went to a few other hackathons and competitions
-	\item \textit{Other} - \LaTeX, Jupyter Notebook
-	\item \textit{Languages}: Serbian, English (C1), German (A2)
-\end{compactitem}
+%\heading{Skills}
+%\begin{compactitem}
+%	\item \textit{Web} - Full-stack; interested in MEVN stack; familiar with Django, Java Spark, Vue.js
+%	\item \textit{Interests} - Distributed systems, Systems design, AWS deployments, Messaging, Deep RL
+%	\item \textit{Software Development tools and practices} - Maven, {\tt git}, eclipse, Postman, PowerDesigner
+%	\item \textit{Competitive Programming} - Went to competitions organized by the Information Society of Serbia in High School; went to a few other hackathons and competitions
+%	\item \textit{Languages}: Serbian, English (C1), German (A2)
+%\end{compactitem}
+%\vspace{1em}
+
+%%%%%%
+% About me 
+%%%%%%%%
+\vspace{0.5em}
+
+\heading{About me}
+
+Hi, I am a motivated \textbf{software engineer} who loves to deeply understand a technology so that 
+it can be leveraged in the best way possible. 
+
+\vspace{1em}
+My current focus is on \textbf{Cloud Technologies} as a whole and my language of choice is \textbf{Go}. 
+I've also done numeruous Full-Stack projects mostly in Uni and had one solo commercial project.  
+
+\vspace{1em}
+You can find my contact details at the top of the first page.
 
 
 
