@@ -109,7 +109,7 @@
 	\begin{tabular}{L!{\VRule}D}
 		#1
 	\end{tabular}
-	\\[0.5em]
+	\\[0.4em]
 }
 
 \newcommand{\timelinetableprojects}[1]{
@@ -140,7 +140,7 @@
 	% Name
 	{\Huge \bf Bojan Popr\v{z}en} \\[0.5em]
 	% Tagline 
-	{\Large Undergraduate student of Software Engineering} \\[0.25em] 
+	{\Large Graduate Software Engineer} \\[0.25em] 
 	% Contact data
 	{\begin{tabular}{c c c c c c c} 
 	30.04.1998. & \textbullet &
@@ -166,7 +166,7 @@
 \heading{Education}
 
 \timelinetable{
-	Oct 2017 -- present & \educationentry{Bachelor's: Software Engineering and IT (GPA: 9.84/10)}
+	2017 -- 2021 & \educationentry{Bachelor's: Software Engineering and IT (GPA: 9.84/10)}
 	{Faculty of Technical Sciences}
 	{University of Novi Sad, Serbia}
 	{\newline Courses and more info at: \href{http://bit.ly/2RaGBi0}{\tt http://bit.ly/2RaGBi0}}
@@ -176,44 +176,58 @@
 % WORK EXPERIENCE %
 %%%%%%%%%%%%
 
+\vspace{1em}
 \heading{Work Experience}
 
 \timelinetable{
-	Oct '20 -- Mar '21 &	\educationentry{Intern}{SAP}{Walldorf, Germany}{\newline
-Member of \textit{TI \& HA - Data Management and Platform}. Mainly worked around \textbf{improving caching architecture
-for user authorization throughout the cloud system}. Wrote code in Go, infrastructure in Docker and K8s. Also did some
+	Oct '20 -- Mar '21 \\ (\small \textit{6 months}) &	\educationentry{Intern}{SAP}{Walldorf, Germany}{\newline
+% Member of \textit{TI \& HA - Data Management and Platform}. 
+Worked on a multi-tenant cluster for running apps in Cloud. 
+% My role was \textbf{improving the caching architecture
+%for user authorization throughout the cloud system}.
+ \textbf{Overhauled the caching architecture for user authorization, 
+ leading to a reduced duration of PR validations by 30\% and improved stability}.
+Wrote code in Go, infrastructure in Docker and K8s. Also did some
 tooling support.
 
 \vspace{0.5em}
-Became a member of {\bfseries SAP FastTrack} (program for top 10\% of students)
+Became a member of {\bfseries SAP FastTrack} (program for top 10\% of students).
 }
 
 \\
-    Oct '19 -- Jan '20 & 	\educationentry{Student Demonstrator}{Faculty of Technical Sciences}{Novi Sad, Serbia}{\newline 
-Courses: \renewcommand{\labelitemi}{$\textendash$} % Dash instead of dots
- \begin{compactitem}
-	\item {\bfseries Object Oriented Programming 2} - Advanced Concepts of OOP using C++ 
-	\item {\bfseries System Programming 1} - Assembler, Compiler, Loader and Linker; Grammars
-\end{compactitem}
+    Oct '19 -- Jan '20 \\ (\small \textit{4 months}) & \educationentry{Teaching Fellow}{Faculty of Technical Sciences}{Novi Sad, Serbia}{\newline 
+Courses: \textit{Object Oriented Programming 2} (Advanced Concepts of OOP using C++), 
+\textit{System Programming 1} (Assembler, Compiler, Loader and Linker; Grammars).
+	%Courses: \renewcommand{\labelitemi}{$\textendash$} % Dash instead of dots
+% \begin{compactitem}
+%	\item {\bfseries Object Oriented Programming 2} - Advanced Concepts of OOP using C++ 
+%	\item {\bfseries System Programming 1} - Assembler, Compiler, Loader and Linker; Grammars
+%\end{compactitem}
 }
 }
 
 %%%%%%%%
 % PROJECTS %
 %%%%%%%%
-
+\vspace{1em}
 \heading{Projects}
-
+\setlength\LTpre{0pt}
 \timelinetableprojects{
-present & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Research} & \textendash & Go & \textendash & Concurrency \end{tabular}}{Go Pipelines (Bachelor Thesis)}{\href{https://github.com/ele7ija/go-pipelines}{\tt github.com/ele7ija/go-pipelines}}
-{Looking at applications of \textit{Pipe-and-Filter} pattern in Go. Applying serial and parallel filters on a real-world example. Performance analysis.} \vspace{0.75em} \\ 
-2020 & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Commercial} & \textendash & Python (Django) & \textendash & Amazon S3 & \textendash & PostgreSQL & \textendash & Heroku \end{tabular}}{Civil Engineering Company's website}{available at: \href{https://doostabilnost.rs}{\tt doostabilnost.rs}}
+2021 & \projectentry{\small \begin{tabular}{@{}l c c c c c c c c c c}\textit{Research} & \textendash & Go & \textendash & Concurrency & \textendash & Image processing & \textendash & Pipelines \end{tabular}}{Go Pipelines (Bachelor Thesis)}{\small \href{https://github.com/ele7ija/go-pipelines}{\tt github.com/ele7ija/go-pipelines}}
+{Optimized an \textbf{image processing server} by utilizing the \textit{Pipeline} pattern and \textit{bounded concurrency} in Go. 
+Compared different types of processing, visualized and analyzed the results.
+\textit{Open-sourced} the library for pipeline processing.
+
+\vspace{0.35em}
+\textbf{\small Article about the project:} \href{https://itnext.io/performant-image-processing-with-go-pipelines-and-bounded-concurrency-3f721ec5dde8}{\tt itnext.io/performant-image-processing}}.
+\vspace{0.75em} \\ 
+2020 & \projectentry{\small \begin{tabular}{@{}l c c c c c c c c c c}\textit{Commercial} & \textendash & Python (Django) & \textendash & Amazon S3 & \textendash & PostgreSQL & \textendash & Heroku \end{tabular}}{Civil Engineering Company's website}{\small available at: \href{https://doostabilnost.rs}{\tt doostabilnost.rs}}
 {A website for a local company I developed from zero and deployed. For BLOB storage I used S3 and PostgreSQL for relational data.} \vspace{0.75em} \\ 
-2021 & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Uni project} & \textendash & Fullstack & \textendash & Document-based  & \textendash & XML & \textendash & RDF & \textendash & Docker \end{tabular}}{Information System for Comissioner For Information of Public Importance's office}{\href{https://github.com/ele7ija/xml-web-services}{\tt github.com/ele7ija/xml-web-services}}
-{An extensive Information System that manages all sorts of documents in the process of requesting the information of public importance. Strong use of XML and RDF stores.} \vspace{0.75em} \\
-2021 & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Uni project} & \textendash & Fullstack & \textendash & Security  & \textendash & x.509 Certificates & \textendash & Keycloak & \textendash & Docker \end{tabular}}{Hospital Security System}{\href{https://github.com/djuricmilan/BSEP_T13}{\tt github.com/djuricmilan/BSEP\_T13}}
+2021 & \projectentry{\small \begin{tabular}{@{}l c c c c c c c c c c}\textit{Uni team project} & \textendash & Fullstack & \textendash & Spring Boot & \textendash & x.509 Certs & \textendash & Keycloak & \textendash & Docker \end{tabular}}{Hospital Security System}{\small \href{https://github.com/djuricmilan/BSEP_T13}{\tt github.com/djuricmilan/BSEP\_T13}}
 {A general Information System that encompases Hospitals and various Devices in hospitals with a goal of securing their inter-communication. A custom CA infrastructure was involved.}}
 % ARCHIVE
+% 2021 & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Uni team project} & \textendash & Fullstack & \textendash & Document-based  & \textendash & XML & \textendash & RDF & \textendash & Docker \end{tabular}}{Document-based Information System}{\href{https://github.com/ele7ija/xml-web-services}{\tt github.com/ele7ija/xml-web-services}}
+% {An extensive Information System that manages all sorts of documents in the process of requesting the information of public importance. Strong use of XML and RDF stores.}
 % 2019 & \projectentry{\begin{tabular}{@{}l c c c c c c c c}\textit{Application} & \textendash & Java & \textendash & Swing & \textendash & PowerDesigner & \textendash & XML\end{tabular}}{Smart Home}{\href{https://gitlab.com/bpoprzen/smart_home}{\tt gitlab.com/bpoprzen/smart\_home}}{Desktop Java application for generating XML files based on user inputs in GUI.}
 
 
@@ -234,11 +248,11 @@ present & \projectentry{\begin{tabular}{@{}l c c c c c c c c c c}\textit{Researc
 %%%%%%
 % About me 
 %%%%%%%%
-\vspace{0.5em}
+\vspace{1em}
 
 \heading{About me}
 
-Hi, I am a motivated \textbf{software engineer} who loves to deeply understand a technology so that 
+Hi, I am a motivated \textbf{Software Engineer} who loves to deeply understand a technology so that 
 it can be leveraged in the best way possible. 
 
 \vspace{1em}
